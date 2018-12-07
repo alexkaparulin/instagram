@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+
+html{
+    font-size: 10px
+}
+body{
+    background: whitesmoke;
+    font-family: 'Open Sans Hebrew', serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+ 
