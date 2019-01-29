@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 
 class Userstory extends Component{
+    
     render(){
         return(
             <ImgBox>

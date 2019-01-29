@@ -18,9 +18,11 @@ class Username extends Component{
                     <Text>Profile</Text>
                     <Img src={contact}></Img>
                 </TopbBox> 
-                <Profiledata />
-                <Profileclasses />
-                <Profileupload/>
+                <UserData>
+                    <Profiledata />
+                    <Profileclasses />
+                    <Profileupload/>
+              </UserData>
               <Bottomnav/>
             </UserContainer>
         )
@@ -36,7 +38,8 @@ const UserContainer = styled.div`
 const TopbBox = styled.div`
     display:flex;
     align-items:center;
-    justify-content:space-around;
+    justify-content:space-between;
+    padding:0 1em;
     height:3em;
     border-bottom:.1em solid lightgray;
 `
@@ -49,4 +52,13 @@ const Text = styled.p`
     font-weight:500;
     font-size:1.1em;
     margin: 1em 5em;
+`
+const UserData = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+     @media (min-width: 40em) {
+     /* width:40em; */
+     }
 `

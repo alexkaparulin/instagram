@@ -18,11 +18,11 @@ code {
     monospace;
 }
 
-.search::placeholder{
+.search,.seaBar::placeholder{
   /* font-size: 1.1em; */
     display:flex;
     justify-self:center;
-    font-weight: 600;
+    font-weight: 100;
     color:rgb(177, 176, 176);
     text-align: center;
   }
@@ -32,3 +32,12 @@ code {
     margin:0 0.15em;
     padding-top:0.1em;
   }
+  .fa-ellipsis-h{
+    color:white;
+    position: absolute;
+    right:0.2em;
+  }
+ 
+
+
+  

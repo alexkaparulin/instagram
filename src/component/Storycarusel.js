@@ -14,17 +14,49 @@ import plus from '../media/plus.png'
 import Userstory from '../component/Userstory'
 
 class Storycarusel extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            profile_data: {}
+        }
+    }
+    componentDidMount() {
     
+         fetch('/api/user')
+            .then( response => {
+                if(response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response disabled.');
+            })
+            .then( data => {
+                let i = `${data.allUsers.length}`;
+                this.setState({
+                    profile_data: data.allUsers[i-1]
+                });
+            })
+            .catch( error => {
+                console.error(`fetch failed: ${error.message}`);
+            }); 
+    }
     render(){
         return(
             <Div className="carousel">
             <Holder className="holder">
             <ImgBox>
                     <Img src={marsh}></Img>
-                    <ImgId>Marshmello</ImgId>
+                    <ImgId>{this.state.profile_data.username}</ImgId>
                     <Plus src={plus}></Plus>
             </ImgBox>    
-            <Userstory  username="DavidGuetta" src={david}/>  
+            <Userstory username="DavidGuetta" src={david} background={david}/>  
+            <Userstory username="MarginGarrrix" src={martin}/>  
+            <Userstory username="DonaldTrump" src={trump}/>
+            <Userstory username="CardiB" src={cardi}/>  
+            <Userstory username="TravisScott" src={travis}/>   
+            <Userstory username="Brady" src={brady}/>   
+            <Userstory username="Shaq" src={shaq}/>   
+            <Userstory username="Zuckerberg" src={mark}/> 
+            <Userstory username="DavidGuetta" src={david}/>  
             <Userstory username="MarginGarrrix" src={martin}/>  
             <Userstory username="DonaldTrump" src={trump}/>
             <Userstory username="CardiB" src={cardi}/>  
@@ -43,17 +75,18 @@ const Div = styled.div `
     margin:0 0 0.4em 0;
     display:flex;
     align-items:center;
-    width: 100%;
+    /* width: 100%; */
     height: 6em;
     overflow: hidden;
     box-sizing: border-box;
+    /* border:0.1em solid lightgray; */
 `
 const carousel = keyframes`
 0% {
   transform: translateX(0);
 }
 50%{
-  transform: translateX(-75%);
+  transform: translateX(-55%);
 }
 100% {
     transform: translateX(0);
@@ -91,5 +124,5 @@ const Plus = styled.img`
     height:1.1em;
     width:1.1em;
     top:-2.6em;
-    left:3.6em;
+    left:3.7em;
 `

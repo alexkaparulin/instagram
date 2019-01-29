@@ -8,6 +8,7 @@ class Links extends Component {
     render(){
         return(   
     <ULinks>
+            <Input type="text" placeholder="Search" className="seaBar"></Input>
             <Link to="/search">
                 <i className="fas fa-search"></i>
             </Link> 
@@ -37,6 +38,24 @@ const ULinks = styled.div`
     justify-content:space-between;
     top:1.5em;
     right:0.5em;
+`
+const Input = styled.input`
+    display:none;
+    @media(min-width:70em){
+    position:absolute;
+    display:flex;
+    right:35em;
+    top:-0.45em;
+    border-radius:.4em;
+    height:2em;
+    width:20em;
+    border:0.1em solid lightgray;
+    font-weight:100;
+    outline:none;
+    }
+    @media(min-width:144em){
+        right:80em;
+    }
 `
 // const Login_link = styled.p`
 //     text-decoration: none;

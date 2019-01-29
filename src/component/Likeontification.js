@@ -46,7 +46,7 @@ const PhotoLikes = styled.div`
 const Text = styled.p`
     font-size:0.75em;
     @media (min-width: 42.5em) {
-        font-size:1.2em;
+        font-size:1em;
       }
 ` 
 const ImgLiked = styled.img`

@@ -53,6 +53,9 @@ const BoxCon = styled.div`
     display:flex;
     flex-direction:column;
     justify-content:center;
+    /* align-items:center; */
+   
+    
 `
 const BoxIcons = styled.div`
     padding: 0 1em;
@@ -67,22 +70,38 @@ const UserImages = styled.div`
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
+    @media (min-width: 70em) {
+       width:52em;
+    }
 `
 const Img = styled.img`
-    flex-basis:calc(33%-0.3em);
-    margin:0.15em;
+    margin:0.05em;
     height:6.5em;
     width:6.5em;
-    @media (min-width: 42.8em) {
+    flex-basis:30%;
+    flex-grow:1;
+    &:hover{
+        opacity:0.75; 
+    }
+    @media (min-width: 31em) {
         height:8em;
         width:8em;
+        margin:0.25em;
     }
     @media (min-width: 48em) {
-        height:12em;
-        width:12em;
+        height:9em;
+        width:9em;
+        margin:0.4em;
     }
+    @media (min-width: 48em) {
+        height:11em;
+        width:11em;
+        margin:0.45em;
+    }
+
     @media (min-width: 76.8em) {
-        height:20em;
-        width:20em;
-    }
+        height:14em;
+        width:14em;
+        margin:0.6em;
+     } 
 `

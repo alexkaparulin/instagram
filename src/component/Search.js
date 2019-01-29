@@ -19,16 +19,16 @@ class Search extends Component{
                 <SliderBox>
                     <Carusel />
                 </SliderBox>
-            <Grid>    
-                <Rightgrid />
-                <Flexgrid />
-                <Leftgrid />
-                <Flexgrid />
-                <Rightgrid />
-                <Flexgrid />
-                <Leftgrid />
-                <Flexgrid />
-          </Grid>  
+                <Grid>    
+                    <Rightgrid />
+                    <Flexgrid />
+                    <Leftgrid />
+                    <Flexgrid />
+                    <Rightgrid />
+                    <Flexgrid />
+                    <Leftgrid />
+                    <Flexgrid />
+                </Grid>  
                 <Bottomnav/>
             </BoxContainer>
         )
@@ -63,9 +63,6 @@ const SliderBox =styled.div`
     align-items:center;
     justify-content:space-around;
     margin:0 0.2em;
-    @media (min-width: 42.5em) {
-       justify-content:center;
-      }
 `
 const Grid = styled.div`
       display:flex;

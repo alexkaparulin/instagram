@@ -61,13 +61,46 @@ const Div = styled.div `
     box-sizing: border-box;
     /* margin: 0 auto; */
     /* border:0.1em solid red; */
+    @media (min-width: 26em) {
+       width:30em;
+    }    
+    @media (min-width: 30em) {
+       width:33em;
+    } 
+    @media (min-width: 34em) {
+        width:36em;
+    }
+    @media (min-width: 38em) {
+        width:39em;
+    }
+    @media (min-width: 42em) {
+        width:42em;
+    }
+    @media (min-width: 46em) {
+        width:45em;
+    }
+    @media (min-width: 50em) {
+        width:48em;
+    }
+    @media (min-width: 54em) {
+        width:51em;
+    }
+    @media (min-width: 58em) {
+        width:54em;
+    }
+    @media (min-width: 64em) {
+        width:60em;
+    }
+    @media (min-width: 72em) {
+        width:60em;
+    }
 `
 const carousel = keyframes`
 0% {
   transform: translateX(0);
 }
 50%{
-  transform: translateX(-75%);
+  transform: translateX(-38%);
 }
 100% {
     transform: translateX(0);
@@ -80,8 +113,9 @@ const carousel = keyframes`
       will-change: contents;
       animation-play-state: paused;
       &:hover {
-        animation: ${carousel} 20s linear infinite;
+        animation: ${carousel} 15s linear infinite;
   }
+ 
 `
 const ImageDiv = styled.div`
     margin-top:0.4em;

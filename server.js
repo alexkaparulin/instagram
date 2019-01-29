@@ -5,6 +5,7 @@ const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
 
+
 const app = express()
 app.use(morgan('dev'))
 app.use(express.json())
@@ -13,6 +14,9 @@ app.use(express.static(path.resolve('./build')))
 const host = process.env.API_HOST
 const port = process.env.API_PORT
 
+const user_router = require('./routes/user.route')
+
+app.use('/api/user', user_router)
 app.get('/api/hello',(req, res) => {
     res.status(200).send('Express REST api available!!')
 })
@@ -23,3 +27,4 @@ app.get('*',  (req, res) => {
 app.listen(3030,  ()=> {
     console.log(`server is alive  ✨ ⚡ http://${host}:${port} ✨ ⚡`)
 });
+

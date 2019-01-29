@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
 import { Link } from 'react-router-dom';
-
-import Register from '../component/Register'
+// import { connect } from 'react-redux';
 
 import styled from 'styled-components'
 import apple from '../media/downloadOnAppStore.png'
@@ -9,33 +8,35 @@ import google from '../media/getOnGooglePlay.png'
 import microsoft from '../media/getFromMicrosoft.png'
 import Bottomnapi from './Bottomapi';
 import Iphone from './Iphone';
+import Register from './Register.view';
 
 
 class Signup extends Component{
 
     render(){
+    
         return(
             <Div>
-                    <Iphone />
+                <Iphone />
                 <SignupContainer>
                     <SignupBox>
-                        <Register />
-                    </SignupBox>
-                        <BoxBottom>
-                            <Text>Have an account?</Text>    
+                        <Register/>                        
+                   </SignupBox>
+                    <BoxBottom>
+                        <Text>Have an account?</Text>    
                             <Link to="/login">
-                                <LText>Log in</LText>
-                            </Link>    
-                        </BoxBottom>
-                        <Text>Get the app.</Text>
-                        <BrandsAll>
-                            <GetBrands>
-                                <Img src={apple}></Img>  
-                                <Img src={google}></Img>  
-                            </GetBrands>
-                            <Img src={microsoft}></Img>
-                        </BrandsAll>
-                        <Bottomnapi />
+                            <LText>Log in</LText>
+                        </Link>    
+                    </BoxBottom>
+                    <Text>Get the app.</Text>
+                    <BrandsAll>
+                        <GetBrands>
+                            <Img src={apple}></Img>  
+                            <Img src={google}></Img>  
+                        </GetBrands>
+                        <Img src={microsoft}></Img>
+                    </BrandsAll>
+                    <Bottomnapi />
                 </SignupContainer>
             </Div>
         )
@@ -43,7 +44,7 @@ class Signup extends Component{
 }
 
 export default Signup;
-
+    
 
 const SignupContainer = styled.div`
     display: flex;
@@ -53,11 +54,8 @@ const SignupContainer = styled.div`
     background:white;
     @media (min-width: 42.5em) {
         background:whitesmoke;
-        height:70%;
   }
-  @media (min-width: 144em) {
-         height:60%;
-     } 
+
 `
 const BoxBottom = styled.div`
     display:flex;
@@ -120,4 +118,12 @@ const Div= styled.div`
     flex-direction:row;
     justify-content:center;
     align-items:center;
+    @media (min-width: 78.6em) {
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        /* margin:-9em -20em 0 0; */
+        margin-left:10em;
+    }
 `

@@ -2,11 +2,53 @@ import React,{Component} from 'react'
 import styled from 'styled-components'
 
 import dots from '../media/dots.png'
-
+import TodoApp from './TodoApp';
 
 class Post extends Component{
-    state={
-        likes:"0"
+    constructor(props){
+        super(props);
+        this.state = {
+           likes: 0,
+           items:[],
+           text:''
+        };
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    pictureLiked(){
+        const likeImage = document.querySelector('.like2') ;
+        let addedLiked = this.state.likes + 1;
+        if(addedLiked===1){
+            this.setState({likes:addedLiked});
+            likeImage.style.color = 'red';
+        }
+        else{
+            let removeLiked = this.state.likes - 1;
+            this.setState({likes:removeLiked});      
+            likeImage.style.color = 'black';
+
+        }
+}
+    // eachComment=(text, i) =>(
+    //     <Postedcomment key={i} index={i}>{text}</Postedcomment>
+    //   )
+    // onChange=(e)=>{
+    //     this.setState({comments: e.target.value});
+    //     // console.log(this.state)
+    // }
+    // addComment(text){
+    //     // this.state.comments.push(text)
+    //     // arr.push(text);
+    //     this.setState({comments: text})
+    //     // console.log(this.state)
+    //   }
+      keyPress=(e)=>{
+        if (e.key === "Enter") {
+            this.addComment(e.target.value);
+            e.preventDefault();
+            console.log(this.state)
+            
+        }
     }
     render(){
         return(
@@ -19,11 +61,11 @@ class Post extends Component{
                 <Dots src={dots}></Dots>
             </BoxTop>
             <PostedBox>
-                <PostImg src={this.props.src}></PostImg>
+                <PostImg src={this.props.src} onClick={()=> this.pictureLiked()}></PostImg>
             </PostedBox>
             <BottomPost>
                 <BoBoxLeft>
-                <i className="far fa-heart"></i>
+                <i className="far fa-heart like2"  onClick={()=> this.pictureLiked()}></i>
                 <i className="far fa-comment"></i>
                 <i className="far fa-share-square"></i>
                 </BoBoxLeft>
@@ -34,9 +76,9 @@ class Post extends Component{
                 <UserName>      
                     <Id><strong>{this.props.username}</strong> {this.props.title}</Id>
                 </UserName>
+            <TodoApp/>
              </Comment>
             <Time>{this.props.time}</Time>
-            <Input placeholder="Add a comment..."></Input>
         </CBox>
         )
     }
@@ -47,14 +89,23 @@ const CBox = styled.div`
     display:flex;
     flex-direction:column;
     margin-bottom:0.2em;
+    background:#fff;
+    /* height:100%; */
+ 
     @media (min-width: 40em) {
-         margin:2em 5em;
-     } 
+         margin:2em 0;
+         border:0.1em solid lightgray;
+         height:35em;
+         width:38em;
+         border-radius:.2em;
+     }
+
 `
 const UserBox = styled.div`
     height:4em;
     display:flex;
     align-items:center;
+    
 `
 const Img = styled.img`
     border-top:0.1em solid #b266b2;
@@ -72,12 +123,10 @@ const IdUser = styled.p`
 `
 const PostedBox = styled.div`
     height:24em;
-    @media (min-width: 42.5em) {
-        height: 32em;
+    @media (min-width: 40em) {
+        height: 24em;
       }
-      @media (mim-width: 48em) {
-        height: 42em;
-      }
+
 `
 const PostImg = styled.img`
     height:100%;
@@ -96,8 +145,8 @@ const BottomPost = styled.div`
 const Time = styled.p`
     font-size:0.55em;
     margin-left:0.5em;
-    margin-top:-0.3em;
-    font-weight:100;
+    /* margin-top:em; */
+    font-weight:400;
     color:gray;
 `
 const BoxTop = styled.div`
@@ -121,17 +170,8 @@ const Likes =styled.p`
 ` 
 const UserName =styled.div`
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
 `   
 const Id= styled(Likes)`
     margin-top:-.7em;
-`
-const Input = styled.input`
-    border-left:none;
-    border-right:none;
-    border-top:none;
-    padding:0.4em ;
-    font-size:0.7em;
-    outline:none;
-    color:gray;
 `

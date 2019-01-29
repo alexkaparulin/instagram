@@ -1,3 +1,4 @@
+// require('dotenv').config();
 import React from 'react';
 import {
     Route,BrowserRouter
@@ -9,7 +10,9 @@ import Username from './Username';
 import Homepage from './Homepage';
 import Search from './Search';
 import Activity from './Activity';
+import Watchall from './WatchAll';
 
+// const API_URL = process.env.REACT_APP_API_URL
 
 const App = ()=> (
         <BrowserRouter>
@@ -22,6 +25,7 @@ const App = ()=> (
 		        <Route path="/homepage" component={Homepage}></Route>
 		        <Route path="/search" component={Search}></Route>
 		        <Route path="/activity" component={Activity}></Route>
+		        <Route path="/stories" component={Watchall}></Route>
             </div>
         </BrowserRouter>
 )

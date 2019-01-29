@@ -29,9 +29,11 @@ const BoxFollowers = styled.div`
     align-items:center;
     height:4em;
     border-bottom:.1em solid #f5f5f2; 
-    padding:0.2em 1em;
-    @media (min-width: 76.8em) {
-        font-size:1.4em;
+    border-top:.1em solid #f5f5f2; 
+    width:100%;
+    /* padding:0.2em 1em; */
+    @media (min-width: 40em) {
+       /* width:100%; */
     }
 `
 const Posts = styled.div`
