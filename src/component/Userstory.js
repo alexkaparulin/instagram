@@ -74,4 +74,5 @@ const ImgId = styled.p`
     margin-top:0.4em;
     font-size:0.7em;
     font-weight:400;
+    color:#fff;
 `

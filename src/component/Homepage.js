@@ -71,8 +71,8 @@ class Homepage extends Component{
                         <Img src={userPic}></Img>
                         <UserData>
                             <Userid>{this.state.profile_data.username}</Userid>
-                            {/* <Userid>Marshmello</Userid> */}
                             <UserName>{this.state.profile_data.fullname}</UserName>
+                            {/* <Userid>Marshmello</Userid> */}
                             {/* <UserName>DJ Marshmello</UserName> */}
                         </UserData>
                     </UserBox>
