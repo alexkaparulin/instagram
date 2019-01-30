@@ -17,7 +17,7 @@ class Trumpstory extends Component{
         const images = [trumps];
         pic.style.backgroundImage = "url("+ images[0]+")";
         
-             let i = 0;
+            //  let i = 0;
              setTimeout(this.close, 4500)
          
     } 

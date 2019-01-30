@@ -15,7 +15,7 @@ class Stories extends Component{
         return(
         <BoxContainer>
             <TeBox>
-                <Text >Stories</Text>
+                <Text>Stories</Text>
                 <Link to="/stories"><Text /*onClick={this.onclick}*/>Watch All</Text></Link>
             </TeBox>       
             <Storycarusel/>

@@ -17,7 +17,7 @@ class Travisstory extends Component{
         const images = [scott];
         pic.style.backgroundImage = "url("+ images[0]+")";
         
-             let i = 0;
+            //  let i = 0;
              setTimeout(this.close, 4500)
          
     } 

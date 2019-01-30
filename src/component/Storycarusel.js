@@ -13,7 +13,7 @@ import shaq from '../media/shak.jpg'
 import mark from '../media/mark.jpg'
 import plus from '../media/plus.png'
 import Userstory from '../component/Userstory'
-import Watchall from './WatchAll';
+// import Watchall from './WatchAll';
 
 class Storycarusel extends Component{
     constructor(props){
@@ -104,9 +104,9 @@ class Storycarusel extends Component{
     }
 }
 export default Storycarusel
-  const StoryDiv = styled.div`
-    
-  `
+//   const StoryDiv = styled.div`
+
+//   `
 const Div = styled.div `
     margin:0 0 0.4em 0;
     display:flex;
@@ -153,7 +153,8 @@ const Img = styled.img`
 const ImgId = styled.p`
     margin-top:0.1em;
     font-size:0.7em;
-    margin-left:1.5em;
+    /* margin-left:1.5em; */
+    align-self:center;
 `
 const Plus = styled.img`
     position:relative;

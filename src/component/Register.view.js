@@ -5,8 +5,6 @@ import instagramLogo from '../media/instagramLogo.png'
 import Ifacebook from '../media/face.png'
 // import { connect } from 'react-redux';
 
-
-
 class Register extends Component {
     
         state = {
@@ -42,7 +40,7 @@ class Register extends Component {
             error_field = 'email';
             return conclude();
         }
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const re = /^(([^<>()\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         
         if(this.state.fullname === ''){
             form_valid = false;

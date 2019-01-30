@@ -13,13 +13,13 @@ class TodoApp extends Component {
     render() {
       return (
         <Div>
-          <TodoList items={this.state.items} />
           <Form onSubmit={this.handleSubmit}>
             <Input
               onChange={this.handleChange}
               value={this.state.text}
               placeholder="Add a comment..."
               ></Input>
+        <TodoList items={this.state.items} />
           </Form>
         </Div>
       );
@@ -55,6 +55,7 @@ class TodoApp extends Component {
   const Form = styled.form`
   `
   const Input = styled.input`
+    position:sticky;
     outline:none;
     border:none; 
     width:100%;

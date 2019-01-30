@@ -126,4 +126,7 @@ const Div= styled.div`
         /* margin:-9em -20em 0 0; */
         margin-left:10em;
     }
+    @media (max-width: 42.5em) {
+    background:white;
+    }
 `

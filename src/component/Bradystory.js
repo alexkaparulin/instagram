@@ -19,7 +19,7 @@ class Bradystory extends Component{
         const images = [tom];
         pic.style.backgroundImage = "url("+ images[0]+")";
         
-             let i = 0;
+            //  let i = 0;
              setTimeout(this.close, 4500)
          
     } 

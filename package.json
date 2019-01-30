@@ -27,7 +27,8 @@
     "dev:client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "start": "node server.js"
+    "start": "node server.js",
+    "now-build": "react-scripts build && mv build dist"
   },
   "eslintConfig": {
     "extends": "react-app"

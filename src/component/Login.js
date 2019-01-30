@@ -48,8 +48,8 @@ class Login extends Component{
             ...this.state, 
         } 
         console.log(new_user);
-        let k = `${this.state.original_list.length}`;
-        let user;
+        // let k = `${this.state.original_list.length}`;
+        // let user;
         let data = this.state.original_list;
         // console.log(data)
         // for (let i of data){

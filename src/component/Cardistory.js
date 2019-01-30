@@ -17,7 +17,7 @@ class Cardistory extends Component{
         const images = [prizecardi];
         pic.style.backgroundImage = "url("+ images[0]+")";
         
-             let i = 0;
+            //  let i = 0;
              setTimeout(this.close, 4500)
          
     } 
@@ -29,10 +29,6 @@ class Cardistory extends Component{
              let i = 0;
              setInterval(function(){
                  pic.style.backgroundImage = "url("+ images[i]+")";
-                 i = i + 1;
-      if (i === images.length) {
-        i =  0;
-      }
              }, 4500)
          
     };
