@@ -70,10 +70,10 @@ class Homepage extends Component{
                     <UserBox>
                         <Img src={userPic}></Img>
                         <UserData>
-                            {/* <Userid>{this.state.profile_data.username}</Userid> */}
-                            <Userid>Marshmello</Userid>
-                            {/* <UserName>{this.state.profile_data.fullname}</UserName> */}
-                            <UserName>DJ Marshmello</UserName>
+                            <Userid>{this.state.profile_data.username}</Userid>
+                            {/* <Userid>Marshmello</Userid> */}
+                            <UserName>{this.state.profile_data.fullname}</UserName>
+                            {/* <UserName>DJ Marshmello</UserName> */}
                         </UserData>
                     </UserBox>
                     <UserStories>

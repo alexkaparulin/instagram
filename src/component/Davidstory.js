@@ -1,24 +1,31 @@
 import React,{Component} from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
+
+import guetta from '../media/guetta.jpg'
 import david from '../media/davidG.jpg'
-import martin from '../media/martin.jpg'
-import brady from '../media/bardy.jpg'
-import shaq from '../media/shak.jpg'
-import travis from '../media/travis.jpg'
 
-class Watchone extends Component{
-    // close(){
-    //     const story = document.querySelector('.user');
-    //     story.style.display='none';
-    // }
-    
+
+class Davidstory extends Component{
+    close(){
+        const story = document.querySelector('.container');
+        story.style.display='none';
+        window.location.assign('/homepage');
+        
+    }
     updating(){
+        const pic = document.querySelector('.story');
+        const images = [guetta];
+        pic.style.backgroundImage = "url("+ images[0]+")";
+        
+             let i = 0;
+             setTimeout(this.close, 4500)
+         
+    } 
+    updating1(){
         const pic = document.querySelector('.user');
-        const images = [
-            david,brady,travis,martin,shaq
-          
-        ];
+        const images = [david];
         pic.style.backgroundImage = "url("+ images[0]+")";
         
              let i = 0;
@@ -30,50 +37,65 @@ class Watchone extends Component{
       }
              }, 4500)
          
-    } 
+    };
     updatingUsers(){
         const user = document.querySelector('.p');
         const time = document.querySelector('.time');
         const text = [
-            "DavidGuetta","Brady","TravisScott","MartinGarrix","Shaq"
+            "DavidGuetta"
         ];
         user.textContent = text[0];
-        
         time.textContent = 1 + "m";
-        
-             let i = 0;
-             setInterval(function(){
-                 user.textContent = text[i];
-                 time.textContent = i + 1 + "m";
-                 i = i + 1;
-                
-      if (i=== text.length) {
-        i =  0;
-      }
-             }, 4500)
-         
     } 
     componentDidMount(){
         this.updating();
+        this.updating1();
         this.updatingUsers();
     }
     render(){
         return(
-            // <Container className="container">
-                // <Link to="/homepage"><Span onClick={this.close}>&times;</Span></Link>
-                // <BoxImage className="story">
-                  <Box>
+            <Container className="container">
+                <Link to="/homepage"><Span onClick={this.close}>&times;</Span></Link>
+                <BoxImage className="story">
+                <Box>
                       <Img className="user"></Img>
                       <P className="p"></P>
                       <Time className="time"></Time>
                       <i className="fas fa-ellipsis-h"></i>
                   </Box>
-            //     </BoxImage>
-            // </Container>
+                </BoxImage>
+            </Container>
         )
     }
 }
-export default Watchone;
+export default Davidstory;
+
+const Container = styled.div`
+    width:209.8vh;
+    height:100vh;
+    background:#323232;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+`
+const BoxImage = styled.div`
+    margin-top:3em;
+    width:18em;
+    height:32em;
+    /* border:gray solid 0.1em; */
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    /* box-shadow: 2px 5px #888888; */
+`
+const Span= styled.span`
+    position:absolute;
+    z-index:1;
+    color:white;
+    top:-0.1em;
+    right:0.3em;
+    font-size:2em;
+` 
 const Box = styled.div`
     display: flex;
     /* border:0.2em solid red; */

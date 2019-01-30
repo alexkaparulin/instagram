@@ -6,8 +6,8 @@ mongoose.Promise = require('bluebird');
 // const uri = `mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`
 const { DB_HOST, DB_PORT, DB_NAME } = process.env
 
-const uri = `mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`
-const uri = 'mongodb://localhost:3000'
+// const uri = `mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`
+const uri = 'mongodb://localhost:27017/instagram'
 
 const options = {
     useNewUrlParser: true,

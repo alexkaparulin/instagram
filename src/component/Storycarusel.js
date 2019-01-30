@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import styled ,{keyframes}from 'styled-components'
+import { Link } from 'react-router-dom';
 
 import marsh from '../media/Marsh.jpg'
 import david from '../media/davidG.jpg'
@@ -12,6 +13,7 @@ import shaq from '../media/shak.jpg'
 import mark from '../media/mark.jpg'
 import plus from '../media/plus.png'
 import Userstory from '../component/Userstory'
+import Watchall from './WatchAll';
 
 class Storycarusel extends Component{
     constructor(props){
@@ -48,29 +50,63 @@ class Storycarusel extends Component{
                     <ImgId>{this.state.profile_data.username}</ImgId>
                     <Plus src={plus}></Plus>
             </ImgBox>    
+            <Link to="/davidstory">
             <Userstory username="DavidGuetta" src={david} background={david}/>  
-            <Userstory username="MarginGarrrix" src={martin}/>  
+            </Link>
+            <Link to="/martinstory">
+            <Userstory username="MarginGarrrix" src={martin}/> 
+            </Link> 
+            <Link to="/trumpstory">
             <Userstory username="DonaldTrump" src={trump}/>
+            </Link>
+            <Link to="/cardistory">
             <Userstory username="CardiB" src={cardi}/>  
+            </Link>
+            <Link to="/travisstory">
             <Userstory username="TravisScott" src={travis}/>   
+            </Link>
+            <Link to="/bradystory">
             <Userstory username="Brady" src={brady}/>   
+            </Link>
+            <Link to="/shaqstory">
             <Userstory username="Shaq" src={shaq}/>   
+            </Link>
+            <Link to="/zuckstory">
             <Userstory username="Zuckerberg" src={mark}/> 
-            <Userstory username="DavidGuetta" src={david}/>  
-            <Userstory username="MarginGarrrix" src={martin}/>  
+            </Link>
+            <Link to="/davidstory">
+            <Userstory username="DavidGuetta" src={david} background={david}/>  
+            </Link>
+            <Link to="/martinstory">
+            <Userstory username="MarginGarrrix" src={martin}/> 
+            </Link> 
+            <Link to="/trumpstory">
             <Userstory username="DonaldTrump" src={trump}/>
+            </Link>
+            <Link to="/cardistory">
             <Userstory username="CardiB" src={cardi}/>  
+            </Link>
+            <Link to="/travisstory">
             <Userstory username="TravisScott" src={travis}/>   
+            </Link>
+            <Link to="/bradystory">
             <Userstory username="Brady" src={brady}/>   
+            </Link>
+            <Link to="/shaqstory">
             <Userstory username="Shaq" src={shaq}/>   
+            </Link>
+            <Link to="/zuckstory">
             <Userstory username="Zuckerberg" src={mark}/> 
+            </Link>
             </Holder>
           </Div>
         )
     }
 }
 export default Storycarusel
-  
+  const StoryDiv = styled.div`
+    
+  `
 const Div = styled.div `
     margin:0 0 0.4em 0;
     display:flex;

@@ -21,6 +21,7 @@ class Register extends Component {
     
     onChange=(e)=>{
         this.setState({[e.target.name]: e.target.value});
+        // console.log(this.state)
     }
     hide_errors = ()=> {
         this.setState({form_valid:true,error_msg:'',error_field:''});
@@ -79,7 +80,7 @@ class Register extends Component {
         const new_user = {    
             ...this.state, 
         } 
-        console.log(new_user);
+        // console.log(new_user);
         
 
         delete new_user.form_valid
@@ -156,7 +157,7 @@ class Register extends Component {
                 <ErrorMsg show={(this.state.form_valid !== true)}>
                                {this.state.error_msg}
                     </ErrorMsg>
-               <Button onClick={this.onSubmit}><Strong>Sign up</Strong></Button>
+               <Button onClick={this.onSubmit} type="submit"><Strong>Sign up</Strong></Button>
                 <LabelBottom>By signing up, you agree to our<br/>
                     <BStrong>Terms, Data Policy</BStrong> and 
                     <BStrong> Cookies<br/> Policy.</BStrong>

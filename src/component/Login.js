@@ -74,6 +74,8 @@ class Login extends Component{
                     // console.log('Conncted User is:',this.state.loggingData)
                     window.location.assign('/homepage')
                     break;
+                }else{
+                    alert('One of your details is incorrect..');
                 }
             // }
         } 
