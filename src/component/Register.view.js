@@ -78,7 +78,7 @@ class Register extends Component {
         const new_user = {    
             ...this.state, 
         } 
-        // console.log(new_user);
+        console.log(new_user);
         
 
         delete new_user.form_valid

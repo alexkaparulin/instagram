@@ -49,13 +49,15 @@ class Login extends Component{
         } 
         console.log(new_user);
         // let k = `${this.state.original_list.length}`;
-        // let user;
+        let user = false;
         let data = this.state.original_list;
         // console.log(data)
         // for (let i of data){
             for(let i = 0; i < data.length; i++) {
                 if (data[i].email === new_user.email && data[i].password === new_user.password) {
                     console.log('You logged in:',data[i])
+                    user = true;
+                    console.log(user)
 
                     fetch('/api/user/', {
                         method: 'post',
@@ -72,13 +74,18 @@ class Login extends Component{
                   
                   
                     // console.log('Conncted User is:',this.state.loggingData)
-                    window.location.assign('/homepage')
                     break;
+                    // }
                 }else{
-                    alert('One of your details is incorrect..');
+                    user = false
+                    console.log(user)
                 }
-            // }
-        } 
+            } 
+            if(user){
+                window.location.assign('/homepage');
+            }else{
+                console.log('One of your details is incorrect..');    
+        }
     }
  
         render(){
